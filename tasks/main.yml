@@ -46,6 +46,7 @@
     api_key: "{{ k8s_auth_api_key }}"
     namespace: "{{ openshift_project }}"
     state: "{{ k8s_state }}"
+    force: "{{ k8s_force }}"
     validate_certs: False
     definition: "{{ lookup('template', item.key) }}"
   no_log: global_no_log
@@ -58,6 +59,7 @@
     api_key: "{{ k8s_auth_api_key }}"
     namespace: "{{ openshift_project }}"
     state: "{{ k8s_state }}"
+    force: "{{ k8s_force }}"
     validate_certs: False
     definition: "{{ lookup('template', item) }}"
   no_log: global_no_log
@@ -70,6 +72,7 @@
     api_key: "{{ k8s_auth_api_key }}"
     namespace: "{{ openshift_project }}"
     state: "{{ k8s_state }}"
+    force: "{{ k8s_force }}"
     validate_certs: False
     definition: "{{ lookup('template', item.key) }}"
   with_dict: "{{ k8s_resources }}"
@@ -81,6 +84,7 @@
     api_key: "{{ k8s_auth_api_key }}"
     namespace: "{{ openshift_project }}"
     state: "{{ k8s_state }}"
+    force: "{{ k8s_force }}"
     validate_certs: False
     definition: "{{ lookup('template', item) }}"
   with_items: "{{ k8s_resources }}"

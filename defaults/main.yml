@@ -9,6 +9,7 @@ k8s_resource_files: []
 # the openshift project to create and apply the resources to
 openshift_project: ""
 k8s_state: present
+k8s_force: no
 k8s_resource_dirs: []
 
 k8s_resources: []
